@@ -1,9 +1,9 @@
 import ProductCard from "./ProductCart";
 
 const Kids=({listItems,setList,cart,setCart})=>{
-    const kidsList=listItems.filter((product)=>product.Category==="Kids");
+    const Category=["Kids"]
     return (
-        <ProductCard listItems={kidsList} setList={setList} cart={cart} setCart={setCart}/>
+        <ProductCard listItems={listItems} setList={setList} cart={cart} setCart={setCart} Category={Category}/>
         
     )
 }

@@ -1,6 +1,7 @@
 import "../components/Wishlist.css";
 
 const Wishlist=({cartItems,listItems,setListItems,setCart})=>{
+  console.log(listItems);
     const onHandleClick = (id) => {
       console.log("in wishlist")
         let product = listItems.filter((item) => item.id === id);
