@@ -1,0 +1,135 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #282c34;
+  color: #fff;
+}
+
+.navbar-logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-links, .navbar-user-options {
+  display: flex;
+  gap: 30px; /* Increased gap between links */
+}
+
+.navbar-links a, .navbar-user-options a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.navbar-search {
+  flex-grow: 0; /* Prevents the search bar from growing too large */
+  margin: 0 40px; /* Increased space around the search bar */
+  max-width: 300px; /* Set a maximum width for the search bar */
+}
+
+.navbar-search input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px; /* Adjust font size if needed */
+}
+
+.navbar-user-options {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #333;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #444;
+}
+
+.dropdown-menu.open {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-search {
+    order: 2;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 20px; /* Increased gap for smaller screens */
+  }
+
+  .navbar-user-options {
+    width: 100%;
+    order: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dropdown-toggle {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+  }
+
+  .dropdown-menu a {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo a {
+    font-size: 20px;
+  }
+
+  .navbar-links a, .navbar-user-options a {
+    font-size: 14px;
+  }
+
+  .navbar-search input {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
