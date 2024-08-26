@@ -7,6 +7,7 @@ import Women from './components/Women';
 import Kids from './components/Kids';
 import Cart from './components/Cart';
 import Wishlist from './components/Wishlist';
+import Profile from './components/Profile';
 import Footer from './components/Footer';
 
 import "./components/Navbar.css"
@@ -33,7 +34,6 @@ const App = () => {
     </Router>
   );
 };
-const Profile = () => <div>Profile</div>;
 const productsDetails=[
   {
     "id": 6,
